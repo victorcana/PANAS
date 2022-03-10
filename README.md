@@ -5,7 +5,7 @@ Sinox v1 is a pipeline built for Linux.
 A number of external programs are requiered to be in global directory and can be accessible from any working directory.
   1. PAML, available from http://abacus.gene.ucl.ac.uk/software/paml.html  (used version 4.9j). [Click to doawnload](http://abacus.gene.ucl.ac.uk/software/paml4.9j.tgz).
   2. ParaAT, available from https://github.com/wonaya/ParaAT (used version 2.0). [Click to doawnload](https://github.com/wonaya/ParaAT/archive/refs/heads/master.zip).
-   - ParaAT requiere have at least one of the following sequence aligner clustalw2, t_coffee, mafft,     muscle. Some of them can be installed from Linux command line. Example:
+   - ParaAT requiere have at least one of the following sequence aligner clustalw2, t_coffee, mafft or     muscle. Some of them can be installed from Linux command line. Example:
 ```
 sudo apt-get install mafft
 ```
@@ -29,11 +29,11 @@ source ~/.bash_profile
 - Input data
 
 - Main Options  
-  `-p` Directory containing protein(s) file(s) in Fasta format. If run OMA to obtain orthologous information can be used the DB file, only with the file in Fasta format. Required Parameter.  
-  `-n` Directory containing nucleotido(s) file(s) in Fasta format.  
-  `-o` sd  
-  `-z` rerf  
-  `-a` sd  
+  `-p` Directory containing protein(s) file(s) in Fasta format. If you ran OMA to obtain orthologous information, it can be used the "DB" file, only with the Fasta file. Required parameter.  
+  `-n` Directory containing nucleotido(s) file(s) in Fasta format. Required parameter.    
+  `-o` Directory containing information of the ortologous groups. If you ran OMA, you can use "PairwiseOrthologs" file. However, a file in format tsv (Tab-separated values) with two column can be used. See example in "Input data" section. Required parameter.  
+  `-z` Process number used during alignment. It is used by the ParAT program. Required Parameter. 
+  `-a` Aligner used. Depending on which alignment program you have installed, you can choose one of the following: "clustalw2", "t_coffee", "mafft" or "muscle"). Default mafft. Optional parameter.  
   `-g` rerf
   `-t` sd  
   `-s` rerf  
