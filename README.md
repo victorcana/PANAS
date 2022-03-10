@@ -29,8 +29,8 @@ source ~/.bash_profile
 - Input data
 
 - Main Options  
-  `-p` Directory containing protein file in Fasta format. If run OMA to obatain orthologous information can be used the DB file, only with the file in Fasta format. [Required Parameter]
-  `-n` rerf  
+  `-p` Directory containing protein(s) file(s) in Fasta format. If run OMA to obtain orthologous information can be used the DB file, only with the file in Fasta format. Required Parameter.  
+  `-n` Directory containing nucleotido(s) file(s) in Fasta format.  
   `-o` sd  
   `-z` rerf  
   `-a` sd  
@@ -38,7 +38,7 @@ source ~/.bash_profile
   `-t` sd  
   `-s` rerf  
   `-h` sd  
-
+Import note: Each gene must have the same code in its nucleotide and amino acid sequence. However, the code from one gene should not be repeated in another gene. Don't use "@" in sequence codes.
 ## Running Sinox
 ```
 ./Sinox.sh -p Protein_example/ -n Nucleotide_example/ -o PairwiseOrthologs_example/ -z 8 -a mafft -g 1 -t OMA -s single-copy
