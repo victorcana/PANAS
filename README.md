@@ -29,8 +29,8 @@ source ~/.bash_profile
 - Input data
 
 - Main Options
-`-p` sd
-`-p` rerf
+  `-p` sd
+  `-p` rerf
 ## Running Sinox
 ```
 ./Sinox.sh -p Protein_example/ -n Nucleotide_example/ -o PairwiseOrthologs_example/ -z 8 -a mafft -g 1 -t OMA -s single-copy
