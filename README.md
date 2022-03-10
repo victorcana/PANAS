@@ -13,12 +13,12 @@ To program can be accessible from any working directory add is in your PATH vari
 ```
 nano ~/.bash_profile
 ```
-Add these lines in the file .bash_profile
+Type and save the following lines:
 ```
 export PATH=$PATH:~/your/path/directory/paml4.9j/src/
 export PATH=$PATH:~/your/path/directory/ParaAT-master/
 ```
-Then in the command line execute:
+Then, in the command line execute:
 ```
 source ~/.bash_profile
 ```
