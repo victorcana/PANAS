@@ -9,7 +9,7 @@ A number of external programs are requiered to be in global directory and can be
 ```
 sudo apt-get install mafft
 ```
---
+---
 **Starting from Reads**
 - Input data
 
