@@ -28,7 +28,7 @@ source ~/.bash_profile
 
 - Input data
 
-- Main Options
+- Main Options  
   `-p` sd
   `-p` rerf
 ## Running Sinox
