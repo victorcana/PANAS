@@ -4,8 +4,8 @@ This pipeline require some bioinformatics programs. Before running this program,
 
 ## Prerequisites
 A number of external programs are expected to be in your path.
-  1) PAML http://abacus.gene.ucl.ac.uk/software/paml.html  (pipeline used version [4.9j](http://abacus.gene.ucl.ac.uk/software/paml4.9j.tgz))
-  2) ParaAT https://github.com/wonaya/ParaAT (version [2.0](https://github.com/wonaya/ParaAT/archive/refs/heads/master.zip))
+  1) PAML http://abacus.gene.ucl.ac.uk/software/paml.html  (used version 4.9j). [Click to doawnload](http://abacus.gene.ucl.ac.uk/software/paml4.9j.tgz).
+  2) ParaAT https://github.com/wonaya/ParaAT (used version 2.0). [Click to doawnload](https://github.com/wonaya/ParaAT/archive/refs/heads/master.zip).
 ---
 [Twitter](https://twitter.com/victorcana1)
 -
