@@ -18,17 +18,21 @@ Type and save the following lines:
 export PATH=$PATH:~/your/path/directory/paml4.9j/src/
 export PATH=$PATH:~/your/path/directory/ParaAT-master/
 ```
-Then, in the command line execute:
+Then, execute in the command line:
 ```
 source ~/.bash_profile
 ```
----
-**Starting from Reads**
+## Starting from Reads
+
+## Instruction
+
 - Input data
+
+- Main Options
 
 ## Running Sinox
 ```
-./Sinox -p Protein_example/ -n Nucleotide_example/ -o PairwiseOrthologs_example/ -z 8 -a mafft -g 1 -t OMA -s single-copy
+./Sinox.sh -p Protein_example/ -n Nucleotide_example/ -o PairwiseOrthologs_example/ -z 8 -a mafft -g 1 -t OMA -s single-copy
 ```
 ---
 ## Test
