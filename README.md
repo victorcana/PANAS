@@ -29,8 +29,16 @@ source ~/.bash_profile
 - Input data
 
 - Main Options  
-  `-p` sd
-  `-p` rerf
+  `-p` Directory containing protein file in Fasta format. If run OMA to obatain orthologous information can be used the DB file, only with the file in Fasta format. [Required Parameter]
+  `-n` rerf  
+  `-o` sd  
+  `-z` rerf  
+  `-a` sd  
+  `-g` rerf
+  `-t` sd  
+  `-s` rerf  
+  `-h` sd  
+
 ## Running Sinox
 ```
 ./Sinox.sh -p Protein_example/ -n Nucleotide_example/ -o PairwiseOrthologs_example/ -z 8 -a mafft -g 1 -t OMA -s single-copy
