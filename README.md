@@ -72,7 +72,8 @@ nad1_Echinococcus_multilocularis_AB018440	nad1_Eudiplozoon_nipponicum_MW704020
 
 ## Starting
 
-Your directory should contain the following files before running
+  - **Directory**
+  Your directory should contain the following files before running
 
 ```
 -bash-4.4$ tree
@@ -107,13 +108,13 @@ or
     ├── genes_speciesA-genes_speciesC.txt
     └── genes_speciesB-genes_speciesC.txt
 ```
-
- - Running Sinox
+  
+ - **Running Sinox**
 ```
 -bash-4.4$ ~/path/Sinox.sh -p protein_directory/ -n nucleotide_directory/ -o Orthologs/ -z 4 -a mafft -g 1 -t OMA -s single-copy
 ```
-
-  - Output
+  
+  - **Output**
 If you choe the option "-s single-copy" the key output files include:   
     - **single-copy** directory.  
     - **Todos_resultados_single-copy**  file.
@@ -121,7 +122,7 @@ If you choe the option "-s multiple-copy" the key output files include:
     - **multiple-copy** directory if you chose the option "-s multiple-copy".
     - **Todos_resultados_multiple-copy**  file.
 The **single-copy** or **multiple-copy** directory has information for each pairwise comparison of species. Example. If the analysis performed the pairwise comparison of the genes of three species (genes_speciesA vs genes_speciesB; genes_speciesB vs genes_speciesC; genes_speciesA vs genes_speciesC), the directory will contain the following subdirectories "genes_speciesA-genes_speciesB", "genes_speciesB-genes_speciesC" and "genes_speciesA-genes_speciesC".
-
+  
 Then of run Sinox.sh your directory should look similar to this:
 
 ```
