@@ -72,7 +72,7 @@ nad1_Echinococcus_multilocularis_AB018440	nad1_Eudiplozoon_nipponicum_MW704020
 
 ## Starting
 
-  - **Directory**
+  - **Directory**  
   Your directory should contain the following files before running
 
 ```
@@ -109,12 +109,12 @@ or
     └── genes_speciesB-genes_speciesC.txt
 ```
   
- - **Running Sinox**
+ - **Running Sinox**  
 ```
 -bash-4.4$ ~/path/Sinox.sh -p protein_directory/ -n nucleotide_directory/ -o Orthologs/ -z 4 -a mafft -g 1 -t OMA -s single-copy
 ```
   
-  - **Output**
+  - **Output**  
 If you choe the option "-s single-copy" the key output files include:   
     - **single-copy** directory.  
     - **Todos_resultados_single-copy**  file.
