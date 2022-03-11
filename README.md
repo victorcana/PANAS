@@ -1,6 +1,19 @@
 # Sinox
 Sinox v1 is a pipeline built for Linux.
 
+## Citation
+XXXX  
+
+Please, cite the dependencies used:  
+PAML:  [Yang, Z. (2007). PAML 4: Phylogenetic Analysis by Maximum Likelihood, Molecular Biology and Evolution, 24(8), 1586-1591.](https://academic.oup.com/mbe/article/24/8/1586/1103731)  
+ParaAT: [Zhang, Z., Xiao, J., Wu, J., Zhang, H., Liu, G., Wang, X., & Dai, L. (2012). ParaAT: a parallel tool for constructing multiple protein-coding DNA alignments. Biochemical and biophysical research communications, 419(4), 779-781.](https://www.sciencedirect.com/science/article/pii/S0006291X12003518)    
+  
+  
+Please also cite the dependencies if used:  
+MAFFT: [Katoh, K., & Standley, D. M. (2013). MAFFT multiple sequence alignment software version 7: improvements in performance and usability. Molecular biology and evolution, 30(4), 772-780.](https://academic.oup.com/mbe/article/30/4/772/1073398)
+
+
+
 ## Prerequisites
 A number of external programs are requiered to be in global directory and can be accessible from any working directory.
   1. PAML, available from http://abacus.gene.ucl.ac.uk/software/paml.html  (used version 4.9j). [Click to doawnload](http://abacus.gene.ucl.ac.uk/software/paml4.9j.tgz).
@@ -191,7 +204,8 @@ Then of run Sinox.sh your directory should look similar to this:
 --
 ## Instruction
 --
-## Citation
---
-##
+
+
+## Flowchart
+![flowchart](Pipeline.png)
 
