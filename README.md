@@ -11,7 +11,10 @@ ParaAT: [Zhang, Z., Xiao, J., Wu, J., Zhang, H., Liu, G., Wang, X., & Dai, L. (2
   
 Please also cite the dependencies if used:  
 MAFFT: [Katoh, K., & Standley, D. M. (2013). MAFFT multiple sequence alignment software version 7: improvements in performance and usability. Molecular biology and evolution, 30(4), 772-780.](https://academic.oup.com/mbe/article/30/4/772/1073398)
-
+MUSCLE: [Edgar, R. C. (2004). MUSCLE: multiple sequence alignment with high accuracy and high throughput. Nucleic acids research, 32(5), 1792-1797.](https://academic.oup.com/nar/article/32/5/1792/2380623)  
+T-Coffee:  [Notredame, C., Higgins, D. G., & Heringa, J. (2000). T-Coffee: A novel method for fast and accurate multiple sequence alignment. Journal of molecular biology, 302(1), 205-217.](https://www.sciencedirect.com/science/article/pii/S0022283600940427)  
+Clustal W: Larkin, M. A., Blackshields, G., Brown, N. P., Chenna, R., McGettigan, P. A., McWilliam, H., Valentin, F., Wallace, I.M., Wilm, A., Lopez, R., Thompson, J.D., Gibson, T.J., & Higgins, D. G. (2007). Clustal W and Clustal X version 2.0. bioinformatics, 23(21), 2947-2948.](https://academic.oup.com/bioinformatics/article/23/21/2947/371686)
+F. Valentin, I.M. Wallace, A. Wilm, R. Lopez, J.D. Thompson, T.J. Gibson
 
 
 ## Prerequisites
