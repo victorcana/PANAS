@@ -29,8 +29,8 @@ source ~/.bash_profile
 - Input data
 
 - Main Options  
-  `-p` Directory containing protein(s) file(s) in Fasta format. If you ran OMA to obtain orthologous information, it can be used the "DB" file, only with the Fasta file. Required parameter.  
-  `-n` Directory containing nucleotido(s) file(s) in Fasta format. Required parameter.    
+  - `-p` Directory containing protein(s) file(s) in Fasta format. If you ran OMA to obtain orthologous information, it can be used the "DB" file, only with the Fasta file. Required parameter.  
+  -`-n` Directory containing nucleotido(s) file(s) in Fasta format. Required parameter.    
   `-o` Directory containing information of the ortologous groups. If you ran OMA, you can use "PairwiseOrthologs" file. However, a file in format tsv (Tab-separated values) with two column can be used. See example in "Input data" section. Required parameter.  
   `-z` Process number used during alignment. It is used by the ParAT program. Required Parameter.  
   `-a` Aligner used. Depending on which alignment program you have installed, you can choose one of the following: "clustalw2", "t_coffee", "mafft" or "muscle"). Default: mafft. Optional parameter.  
@@ -39,7 +39,7 @@ source ~/.bash_profile
   `-s` You can choose between the parameters: "single-copy" or "multiple-copy". Allows you to choose if you want to perform the analysis using only the information of orthologous genes with a 1:1 ratio ("single-copy"), or orthologous groups of multiple copies, such as 1:many, many:1, and many:many ("multiple-copy"). Useful parameter if your information comes from OMA. If your information does not have the OMA "PairwiseOrthologs" format, you can choose any. Required parameter.  
   `-h` Help  
   
-Import note: Each gene must have the same code in its nucleotide and amino acid sequence. However, the code from one gene should not be repeated in another gene. Don't use "@" in sequence codes.
+**Import note:** Each gene must have the same code in its nucleotide and amino acid sequence. However, the code from one gene should not be repeated in another gene. Don't use "@" in sequence codes.
 ## Running Sinox
 ```
 ./Sinox.sh -p Protein_example/ -n Nucleotide_example/ -o PairwiseOrthologs_example/ -z 8 -a mafft -g 1 -t OMA -s single-copy
