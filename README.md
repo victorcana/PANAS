@@ -28,10 +28,9 @@ source ~/.bash_profile
 
 - Input data
 The pipeline requires three files
-    - Directory with file(s) containing multiple amino acid sequences
-    - Directory with file(s) containing multiple nucleotide sequences
-
-The pipeline Currently, get_organelle_from_reads.py was written for illumina pair-end/single-end data (fastq or fastq.gz). We recommend using adapter-trimmed raw reads without quality control. Usually, >1G per end is enough for plastome for most normal angiosperm samples, and >5G per end is enough for mitochondria genome assembly. Since v1.6.2, get_organelle_from_reads.py will automatically estimate the read data it needs, without user assignment nor data reducing (see flags --reduce-reads-for-coverage and --max-reads).
+    - Directory with file(s) containing multiple amino acid sequences.  
+    - Directory with file(s) containing multiple nucleotide sequences.  
+    - Directory with file(s) containing orthologous groups.  
 
 - Main Options  
   - `-p` Directory containing protein(s) file(s) in Fasta format. If you ran OMA to obtain orthologous information, it can be used the "DB" file, only with the Fasta file. Required parameter.  
@@ -45,6 +44,8 @@ The pipeline Currently, get_organelle_from_reads.py was written for illumina pai
   - `-h` Help  
   
 **Import note:** Each gene must have the same code in its nucleotide and amino acid sequence. However, the code from one gene should not be repeated in another gene. Don't use "@" in sequence codes.
+
+
 ## Running Sinox
 ```
 ./Sinox.sh -p Protein_example/ -n Nucleotide_example/ -o PairwiseOrthologs_example/ -z 8 -a mafft -g 1 -t OMA -s single-copy
