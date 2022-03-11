@@ -22,16 +22,57 @@ Then, execute in the command line:
 ```
 source ~/.bash_profile
 ```
-## Starting from Reads
 
-## Instruction
+## Main Options  
+  - `-p` Directory containing protein(s) file(s) in Fasta format. If you ran OMA to obtain orthologous information, it can be used the "DB" file, only with the Fasta file. Required parameter.  
+  - `-n` Directory containing nucleotido(s) file(s) in Fasta format. Required parameter.    
+  - `-o` Directory containing information of the ortologous groups. If you ran OMA, you can use "PairwiseOrthologs" file. However, it can be used tab-delimited text file(s) with each row representing a homologous group with two column. See example in Input data section. Required parameter.  
+  - `-z` Process number used during alignment. It is used by the ParAT program. Required Parameter.  
+  - `-a` Aligner used. Depending on which alignment program you have installed, you can choose one of the following: "clustalw2", "t_coffee", "mafft" or "muscle"). Default: mafft. Optional parameter.  
+  - `-g` Genetic Code used. Default: 1. 1 represent "The Standard Code". For more information see documentation of [ParaAT](https://ngdc.cncb.ac.cn/tools/paraat/doc). Optional parameter.    
+  - `-t` Type of format of the file(s) containing information of the orthologous groups. You can chose one of the following: "OMA" or "other". If two information of the ortologous groups correspond to the "PairwiseOrthologs" file chose "OMA". Requerid parameter.     
+  - `-s` You can choose between the parameters: "single-copy" or "multiple-copy". Allows you to choose if you want to perform the analysis using only the information of orthologous genes with a 1:1 ratio ("single-copy"), or orthologous groups of multiple copies, such as 1:many, many:1, and many:many ("multiple-copy"). Useful parameter if your information comes from OMA. If your information does not have the OMA "PairwiseOrthologs" format, you can choose any. Required parameter.  
+  - `-h` Help  
+  
+**Import note:** Each gene must have the same code in its nucleotide and amino acid sequence. However, the code from one gene should not be repeated in another gene. Don't use "@" in sequence codes.
 
-- Input data
+## Starting
+
+- Input data  
 The pipeline requires four files. See Examples.  
     - Directory with file(s) containing multiple amino acid sequences.  
-    - Directory with file(s) containing multiple nucleotide sequences.  
-    - Directory with file(s) containing orthologous groups.  
+    - Directory with file(s) containing multiple nucleotide sequences.   
     - Control files that specify the models and options for the analysis. No need to modify anything. Modifying some parameters in the control file can lead to error.  
+    - Directory with file(s) containing orthologous groups. 
+      - Example of "PairwiseOrthologs" OMA format, for the option "-t OMA":
+```
+-bash-4.4$ genes_speciesA-genes_speciesB.txt 
+# Format: Protein 1<tab>Protein 2<tab>Protein ID1<tab>ProteinID2<tab>Orthology type<tab>OMA group (if any)
+# Every pair is listed only once, and in no particular order.
+# The map between sequence number and ID are given
+# in the file "Map-SeqNum-ID.map
+1	1	atp6_Echinococcus_multilocularis_AB018440	atp6_Eudiplozoon_nipponicum_MW704020	1:1	11
+2	2	cox1_Echinococcus_multilocularis_AB018440	cox1_Eudiplozoon_nipponicum_MW704020	1:1	1
+3	3	cox2_Echinococcus_multilocularis_AB018440	cox2_Eudiplozoon_nipponicum_MW704020	1:1	1
+4	4	cox3_Echinococcus_multilocularis_AB018440	cox3_Eudiplozoon_nipponicum_MW704020	1:1	8
+5	5	cytb_Echinococcus_multilocularis_AB018440	cytb_Eudiplozoon_nipponicum_MW704020	1:1	2
+6	6	nad1_Echinococcus_multilocularis_AB018440	nad1_Eudiplozoon_nipponicum_MW704020	1:1	5
+```
+- Example of other format, for the option "-t other":
+```
+-bash-4.4$ head genes_speciesA-genes_speciesB.txt 
+atp6_Echinococcus_multilocularis_AB018440	atp6_Eudiplozoon_nipponicum_MW704020
+cox1_Echinococcus_multilocularis_AB018440	cox1_Eudiplozoon_nipponicum_MW704020
+cox2_Echinococcus_multilocularis_AB018440	cox2_Eudiplozoon_nipponicum_MW704020
+cox3_Echinococcus_multilocularis_AB018440	cox3_Eudiplozoon_nipponicum_MW704020
+cytb_Echinococcus_multilocularis_AB018440	cytb_Eudiplozoon_nipponicum_MW704020
+nad1_Echinococcus_multilocularis_AB018440	nad1_Eudiplozoon_nipponicum_MW704020
+nad2_Echinococcus_multilocularis_AB018440	nad2_Eudiplozoon_nipponicum_MW704020
+nad3_Echinococcus_multilocularis_AB018440	nad3_Eudiplozoon_nipponicum_MW704020
+nad4_Echinococcus_multilocularis_AB018440	nad4_Eudiplozoon_nipponicum_MW704020
+nad4L_Echinococcus_multilocularis_AB018440	nad4L_Eudiplozoon_nipponicum_MW704020
+```
+
 
 Your directory should contain the following files before running
 ```
@@ -68,23 +109,10 @@ tree
     └── genes_speciesB-genes_speciesC.txt
 ```
 
-- Main Options  
-  - `-p` Directory containing protein(s) file(s) in Fasta format. If you ran OMA to obtain orthologous information, it can be used the "DB" file, only with the Fasta file. Required parameter.  
-  - `-n` Directory containing nucleotido(s) file(s) in Fasta format. Required parameter.    
-  - `-o` Directory containing information of the ortologous groups. If you ran OMA, you can use "PairwiseOrthologs" file. However, it can be used tab-delimited text file(s) with each row representing a homologous group with two column. See example in Input data section. Required parameter.  
-  - `-z` Process number used during alignment. It is used by the ParAT program. Required Parameter.  
-  - `-a` Aligner used. Depending on which alignment program you have installed, you can choose one of the following: "clustalw2", "t_coffee", "mafft" or "muscle"). Default: mafft. Optional parameter.  
-  - `-g` Genetic Code used. Default: 1. 1 represent "The Standard Code". For more information see documentation of [ParaAT](https://ngdc.cncb.ac.cn/tools/paraat/doc). Optional parameter.    
-  - `-t` Type of format of the file(s) containing information of the orthologous groups. You can chose one of the following: "OMA" or "other". If two information of the ortologous groups correspond to the "PairwiseOrthologs" file chose "OMA". Requerid parameter.     
-  - `-s` You can choose between the parameters: "single-copy" or "multiple-copy". Allows you to choose if you want to perform the analysis using only the information of orthologous genes with a 1:1 ratio ("single-copy"), or orthologous groups of multiple copies, such as 1:many, many:1, and many:many ("multiple-copy"). Useful parameter if your information comes from OMA. If your information does not have the OMA "PairwiseOrthologs" format, you can choose any. Required parameter.  
-  - `-h` Help  
-  
-**Import note:** Each gene must have the same code in its nucleotide and amino acid sequence. However, the code from one gene should not be repeated in another gene. Don't use "@" in sequence codes.
-
 
  - Running Sinox
 ```
-./Sinox.sh -p protein_directory/ -n nucleotide_directory/ -o Orthologs/ -z 4 -a mafft -g 1 -t OMA -s single-copy
+~/path/Sinox.sh -p protein_directory/ -n nucleotide_directory/ -o Orthologs/ -z 4 -a mafft -g 1 -t OMA -s single-copy
 ```
 
   - Output
