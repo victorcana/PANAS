@@ -27,10 +27,11 @@ source ~/.bash_profile
 ## Instruction
 
 - Input data
-The pipeline requires three files
+The pipeline requires four files. See Examples.  
     - Directory with file(s) containing multiple amino acid sequences.  
     - Directory with file(s) containing multiple nucleotide sequences.  
     - Directory with file(s) containing orthologous groups.  
+    - Control files that specify the models and options for the analysis. No need to modify anything. Modifying some parameters in the control file can lead to error.  
 
 - Main Options  
   - `-p` Directory containing protein(s) file(s) in Fasta format. If you ran OMA to obtain orthologous information, it can be used the "DB" file, only with the Fasta file. Required parameter.  
