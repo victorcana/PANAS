@@ -9,7 +9,7 @@ A number of external programs are requiered to be in global directory and can be
 ```
 sudo apt-get install mafft
 ```
-To program can be accessible from any working directory add is in your PATH variable. In bash can add in ~/.bash_profile using of following commands:
+So program can be accessible from any working directory add is in your PATH variable. In bash can add in ~/.bash_profile using of following commands:
 ```
 nano ~/.bash_profile
 ```
