@@ -7,11 +7,11 @@ A number of external programs are requiered to be in global directory and can be
   2. ParaAT, available from https://github.com/wonaya/ParaAT (used version 2.0). [Click to doawnload](https://github.com/wonaya/ParaAT/archive/refs/heads/master.zip).    
       ParaAT requiere have at least one of the following sequence aligner clustalw2, t_coffee, mafft or     muscle. Some of them can be installed from Linux command line. Example:
 ```
-sudo apt-get install mafft
+-bash-4.4$ sudo apt-get install mafft
 ```
 So program can be accessible from any working directory add is in your PATH variable. In bash can add in ~/.bash_profile using of following commands:
 ```
-nano ~/.bash_profile
+-bash-4.4$ nano ~/.bash_profile
 ```
 Type and save the following lines:
 ```
@@ -20,13 +20,13 @@ export PATH=$PATH:~/your/path/directory/ParaAT-master/
 ```
 Then, execute in the command line:
 ```
-source ~/.bash_profile
+-bash-4.4$ source ~/.bash_profile
 ```
 
 ## Main Options  
   - `-p` Directory containing protein(s) file(s) in Fasta format. If you ran OMA to obtain orthologous information, it can be used the "DB" file, only with the Fasta file. Required parameter.  
   - `-n` Directory containing nucleotido(s) file(s) in Fasta format. Required parameter.    
-  - `-o` Directory containing information of the ortologous groups. If you ran OMA, you can use "PairwiseOrthologs" file. However, it can be used tab-delimited text file(s) with each row representing a homologous group with two column. See example in Input data section. Required parameter.  
+  - `-o` Directory containing information of the ortologous groups. If you ran OMA, you can use "PairwiseOrthologs" file. However, it can used tab-delimited text file(s) with each row representing an orthologous group with two column. See example in Input data section. Required parameter.  
   - `-z` Process number used during alignment. It is used by the ParAT program. Required Parameter.  
   - `-a` Aligner used. Depending on which alignment program you have installed, you can choose one of the following: "clustalw2", "t_coffee", "mafft" or "muscle"). Default: mafft. Optional parameter.  
   - `-g` Genetic Code used. Default: 1. 1 represent "The Standard Code". For more information see documentation of [ParaAT](https://ngdc.cncb.ac.cn/tools/paraat/doc). Optional parameter.    
@@ -36,9 +36,8 @@ source ~/.bash_profile
   
 **Import note:** Each gene must have the same code in its nucleotide and amino acid sequence. However, the code from one gene should not be repeated in another gene. Don't use "@" in sequence codes.
 
-## Starting
 
-- Input data  
+## Input data  
 The pipeline requires four files. See Examples.  
     - Directory with file(s) containing multiple amino acid sequences.  
     - Directory with file(s) containing multiple nucleotide sequences.   
@@ -60,23 +59,21 @@ The pipeline requires four files. See Examples.
 ```
 - Example of other format, for the option "-t other":
 ```
--bash-4.4$ head genes_speciesA-genes_speciesB.txt 
+-bash-4.4$ head -n 6 genes_speciesA-genes_speciesB.txt 
 atp6_Echinococcus_multilocularis_AB018440	atp6_Eudiplozoon_nipponicum_MW704020
 cox1_Echinococcus_multilocularis_AB018440	cox1_Eudiplozoon_nipponicum_MW704020
 cox2_Echinococcus_multilocularis_AB018440	cox2_Eudiplozoon_nipponicum_MW704020
 cox3_Echinococcus_multilocularis_AB018440	cox3_Eudiplozoon_nipponicum_MW704020
 cytb_Echinococcus_multilocularis_AB018440	cytb_Eudiplozoon_nipponicum_MW704020
 nad1_Echinococcus_multilocularis_AB018440	nad1_Eudiplozoon_nipponicum_MW704020
-nad2_Echinococcus_multilocularis_AB018440	nad2_Eudiplozoon_nipponicum_MW704020
-nad3_Echinococcus_multilocularis_AB018440	nad3_Eudiplozoon_nipponicum_MW704020
-nad4_Echinococcus_multilocularis_AB018440	nad4_Eudiplozoon_nipponicum_MW704020
-nad4L_Echinococcus_multilocularis_AB018440	nad4L_Eudiplozoon_nipponicum_MW704020
 ```
 
+## Starting
 
 Your directory should contain the following files before running
+
 ```
-tree
+-bash-4.4$ tree
 .
 ├── protein_directory
 │   ├── speciesA.fa
@@ -96,7 +93,7 @@ tree
 or
 
 ```
-tree
+-bash-4.4$ tree
 .
 ├── protein_directory
 │   └── speciesABC.fa
@@ -109,10 +106,9 @@ tree
     └── genes_speciesB-genes_speciesC.txt
 ```
 
-
  - Running Sinox
 ```
-~/path/Sinox.sh -p protein_directory/ -n nucleotide_directory/ -o Orthologs/ -z 4 -a mafft -g 1 -t OMA -s single-copy
+-bash-4.4$ ~/path/Sinox.sh -p protein_directory/ -n nucleotide_directory/ -o Orthologs/ -z 4 -a mafft -g 1 -t OMA -s single-copy
 ```
 
   - Output
@@ -124,8 +120,10 @@ If you choe the option "-s multiple-copy" the key output files include:
     - **Todos_resultados_multiple-copy**  file.
 The **single-copy** or **multiple-copy** directory has information for each pairwise comparison of species. Example. If the analysis performed the pairwise comparison of the genes of three species (genes_speciesA vs genes_speciesB; genes_speciesB vs genes_speciesC; genes_speciesA vs genes_speciesC), the directory will contain the following subdirectories "genes_speciesA-genes_speciesB", "genes_speciesB-genes_speciesC" and "genes_speciesA-genes_speciesC".
 
+Then of run Sinox.sh your directory should look similar to this:
+
 ```
-tree
+-bash-4.4$ tree
 .
 ├── all.cds
 ├── all.pep
