@@ -37,16 +37,16 @@ Your directory should contain the following files before running
 ```
 tree
 .
-├── CDS_AA
+├── protein_directory
 │   ├── speciesA.fa
 │   ├── speciesB.fa
 │   └── speciesC.fa
-├── CDS_NUC
+├── nucleotide_directory
 │   ├── speciesA.fa
 │   ├── speciesB.fa
 │   └── speciesC.fa
 ├── codeml.ctl
-└── PairwiseOrthologs
+└── Orthologs
     ├── genes_speciesA-genes_speciesB.txt
     ├── genes_speciesA-genes_speciesC.txt
     └── genes_speciesB-genes_speciesC.txt
@@ -57,12 +57,12 @@ or
 ```
 tree
 .
-├── CDS_AA
+├── protein_directory
 │   └── speciesABC.fa
-├── CDS_NUC
+├── nucleotide_directory
 │   └── speciesABC.fa
 ├── codeml.ctl
-└── PairwiseOrthologs
+└── Orthologs
     ├── genes_speciesA-genes_speciesB.txt
     ├── genes_speciesA-genes_speciesC.txt
     └── genes_speciesB-genes_speciesC.txt
@@ -81,6 +81,12 @@ tree
   
 **Import note:** Each gene must have the same code in its nucleotide and amino acid sequence. However, the code from one gene should not be repeated in another gene. Don't use "@" in sequence codes.
 
+
+ - Running Sinox
+```
+./Sinox.sh -p protein_directory/ -n nucleotide_directory/ -o Orthologs/ -z 4 -a mafft -g 1 -t OMA -s single-copy
+```
+
   - Output
 If you choe the option "-s single-copy" the key output files include:   
     - **single-copy** directory.  
@@ -90,11 +96,70 @@ If you choe the option "-s multiple-copy" the key output files include:
     - **Todos_resultados_multiple-copy**  file.
 The **single-copy** or **multiple-copy** directory has information for each pairwise comparison of species. Example. If the analysis performed the pairwise comparison of the genes of three species (genes_speciesA vs genes_speciesB; genes_speciesB vs genes_speciesC; genes_speciesA vs genes_speciesC), the directory will contain the following subdirectories "genes_speciesA-genes_speciesB", "genes_speciesB-genes_speciesC" and "genes_speciesA-genes_speciesC".
 
+```
+tree
+.
+├── all.cds
+├── all.pep
+├── codeml.ctl
+├── nucleotide_directory
+│   └── speciesABC.fa
+├── Orthologs
+│   ├── genes_speciesA-genes_speciesB.txt
+│   ├── genes_speciesA-genes_speciesC.txt
+│   └── genes_speciesB-genes_speciesC.txt
+├── proc
+├── protein_directory
+│   └── speciesABC.fa
+├── single-copy
+│   ├── genes_speciesA-genes_speciesB.txt.carpeta
+│   │   ├── codeml.ctl
+│   │   ├── genes_speciesA-genes_speciesB.txt.homologos
+│   │   ├── guia.ctl
+│   │   ├── output
+│   │   │   ├── nad4_Echinococcus_multilocularis_AB018440-nad4_Eudiplozoon_nipponicum_MW704020.cds_aln.paml
+│   │   │   ├── nad4_Echinococcus_multilocularis_AB018440-nad4_Eudiplozoon_nipponicum_MW704020.cds_aln.paml.mlc
+│   │   │   ├── nad4L_Echinococcus_multilocularis_AB018440-nad4L_Eudiplozoon_nipponicum_MW704020.cds_aln.paml
+│   │   │   ├── nad4L_Echinococcus_multilocularis_AB018440-nad4L_Eudiplozoon_nipponicum_MW704020.cds_aln.paml.mlc
+│   │   │   ├── nad5_Echinococcus_multilocularis_AB018440-nad5_Eudiplozoon_nipponicum_MW704020.cds_aln.paml
+│   │   │   ├── nad5_Echinococcus_multilocularis_AB018440-nad5_Eudiplozoon_nipponicum_MW704020.cds_aln.paml.mlc
+│   │   │   ├── nad6_Echinococcus_multilocularis_AB018440-nad6_Eudiplozoon_nipponicum_MW704020.cds_aln.paml
+│   │   │   └── nad6_Echinococcus_multilocularis_AB018440-nad6_Eudiplozoon_nipponicum_MW704020.cds_aln.paml.mlc
+│   │   ├── Resultados.genes_speciesA-genes_speciesB.txt.vic
+│   │   └── Resultados.genes_speciesA-genes_speciesB.txt.vic2
+│   ├── genes_speciesA-genes_speciesC.txt.carpeta
+│   │   ├── codeml.ctl
+│   │   ├── genes_speciesA-genes_speciesC.txt.homologos
+│   │   ├── guia.ctl
+│   │   ├── output
+│   │   │   ├── nad4_Echinococcus_multilocularis_AB018440-nad4_Fasciola_hepatica_AF216697.cds_aln.paml
+│   │   │   ├── nad4_Echinococcus_multilocularis_AB018440-nad4_Fasciola_hepatica_AF216697.cds_aln.paml.mlc
+│   │   │   ├── nad4L_Echinococcus_multilocularis_AB018440-nad4L_Fasciola_hepatica_AF216697.cds_aln.paml
+│   │   │   ├── nad4L_Echinococcus_multilocularis_AB018440-nad4L_Fasciola_hepatica_AF216697.cds_aln.paml.mlc
+│   │   │   ├── nad5_Echinococcus_multilocularis_AB018440-nad5_Fasciola_hepatica_AF216697.cds_aln.paml
+│   │   │   ├── nad5_Echinococcus_multilocularis_AB018440-nad5_Fasciola_hepatica_AF216697.cds_aln.paml.mlc
+│   │   │   ├── nad6_Echinococcus_multilocularis_AB018440-nad6_Fasciola_hepatica_AF216697.cds_aln.paml
+│   │   │   └── nad6_Echinococcus_multilocularis_AB018440-nad6_Fasciola_hepatica_AF216697.cds_aln.paml.mlc
+│   │   ├── Resultados.genes_speciesA-genes_speciesC.txt.vic
+│   │   └── Resultados.genes_speciesA-genes_speciesC.txt.vic2
+│   └── genes_speciesB-genes_speciesC.txt.carpeta
+│       ├── codeml.ctl
+│       ├── genes_speciesB-genes_speciesC.txt.homologos
+│       ├── guia.ctl
+│       ├── output
+│       │   ├── nad4_Eudiplozoon_nipponicum_MW704020-nad4_Fasciola_hepatica_AF216697.cds_aln.paml
+│       │   ├── nad4_Eudiplozoon_nipponicum_MW704020-nad4_Fasciola_hepatica_AF216697.cds_aln.paml.mlc
+│       │   ├── nad4L_Eudiplozoon_nipponicum_MW704020-nad4L_Fasciola_hepatica_AF216697.cds_aln.paml
+│       │   ├── nad4L_Eudiplozoon_nipponicum_MW704020-nad4L_Fasciola_hepatica_AF216697.cds_aln.paml.mlc
+│       │   ├── nad5_Eudiplozoon_nipponicum_MW704020-nad5_Fasciola_hepatica_AF216697.cds_aln.paml
+│       │   ├── nad5_Eudiplozoon_nipponicum_MW704020-nad5_Fasciola_hepatica_AF216697.cds_aln.paml.mlc
+│       │   ├── nad6_Eudiplozoon_nipponicum_MW704020-nad6_Fasciola_hepatica_AF216697.cds_aln.paml
+│       │   └── nad6_Eudiplozoon_nipponicum_MW704020-nad6_Fasciola_hepatica_AF216697.cds_aln.paml.mlc
+│       ├── Resultados.genes_speciesB-genes_speciesC.txt.vic
+│       └── Resultados.genes_speciesB-genes_speciesC.txt.vic2
+└── Todos_resultados_single-copy
+```
 
-## Running Sinox
-```
-./Sinox.sh -p protein_directory/ -n nucleotide_directory/ -o PairwiseOrthologs_example/ -z 4 -a mafft -g 1 -t OMA -s single-copy
-```
 ---
 ## Test
 --
