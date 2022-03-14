@@ -33,7 +33,7 @@ Then run on the command line:
   - `-z` Process number used during alignment. It is used by the ParaAT program. Required parameter.  
   - `-a` Aligner used. Depending on the alignment program you have installed, you can choose one of the following: "clustalw2", "t_coffee", "mafft" or "muscle"). Default: mafft. Optional parameter.  
   - `-g` Genetic Code used. Default value: 1 (The Standard Code). For more information see the documentation of [ParaAT](https://ngdc.cncb.ac.cn/tools/paraat/doc). Optional parameter.    
-  - `-t` Format type of the file(s) containing orthologous group information. You can choose one of the following: "OMA" or "other". If the data of the orthologous groups correspond to the file "PairwiseOrthologs" choose "OMA". Required parameter.     
+  - `-t` Format type of the file(s) containing orthologous group information. You can choose one of the following: "OMA" or "other". If the data of the orthologous groups correspond to the PairwiseOrthologs format of OMA, choose "OMA". Required parameter.      
   - `-s` You can choose between the parameters: "single-copy" or "multiple-copy". Allows you to choose wheter to perform the analysis using only the information from orthologous genes with a 1:1 ratio ("single-copy"), or orthologous groups of multiple copies, such as 1:many, many:1, and many:many ("multiple-copy"). Useful parameter if your information comes from OMA. If your information is not in the OMA "PairwiseOrthologs" format, you can choose either. Required parameter.   
   - `-h` Help   
   
