@@ -4,14 +4,15 @@ Sinox v1 is a pipeline built for Linux.
 
 
 ## Prerequisites
-A number of external programs are requiered to be in global directory and can be accessible from any working directory.
-  1. PAML, available from http://abacus.gene.ucl.ac.uk/software/paml.html  (used version 4.9j). [Click to doawnload](http://abacus.gene.ucl.ac.uk/software/paml4.9j.tgz).
-  2. ParaAT, available from https://github.com/wonaya/ParaAT (used version 2.0). [Click to doawnload](https://github.com/wonaya/ParaAT/archive/refs/heads/master.zip).    
-      ParaAT requiere have at least one of the following sequence aligner clustalw2, t_coffee, mafft or     muscle. Some of them can be installed from Linux command line. Example:
+Various external programs are required to be in the global directory and accesible from any working directory.
+  1. PAML, available at http://abacus.gene.ucl.ac.uk/software/paml.html  (version 4.9j is used). [Click to download](http://abacus.gene.ucl.ac.uk/software/paml4.9j.tgz).  
+  2. ParaAT, available at https://github.com/wonaya/ParaAT (version 2.0 is used). [Click to download](https://github.com/wonaya/ParaAT/archive/refs/heads/master.zip).    
+      ParaAT requires having at least one of the following sequence aligners clustalw2, t_coffee, mafft or     muscle. Some of them can be installed from Linux command line. Example:  
 ```
 -bash-4.4$ sudo apt-get install mafft
 ```
-So program can be accessible from any working directory add is in your PATH variable. In bash can add in ~/.bash_profile using of following commands:
+To make the program accessible from any working directory, add it to your PATH variable. In bash you can add ~/.bash_profile using the following commands:  
+
 ```
 -bash-4.4$ nano ~/.bash_profile
 ```
@@ -20,32 +21,32 @@ Type and save the following lines:
 export PATH=$PATH:~/your/path/directory/paml4.9j/src/
 export PATH=$PATH:~/your/path/directory/ParaAT-master/
 ```
-Then, execute in the command line:
+Then run on the command line:  
 ```
 -bash-4.4$ source ~/.bash_profile
 ```
 
 ## Main Options  
-  - `-p` Directory containing protein(s) file(s) in Fasta format. If you ran OMA to obtain orthologous information, it can be used the "DB" file, only with the Fasta file. Required parameter.  
-  - `-n` Directory containing nucleotido(s) file(s) in Fasta format. Required parameter.    
-  - `-o` Directory containing information of the ortologous groups. If you ran OMA, you can use "PairwiseOrthologs" file. However, it can used tab-delimited text file(s) with each row representing an orthologous group with two column. See example in Input data section. Required parameter.  
-  - `-z` Process number used during alignment. It is used by the ParAT program. Required Parameter.  
-  - `-a` Aligner used. Depending on which alignment program you have installed, you can choose one of the following: "clustalw2", "t_coffee", "mafft" or "muscle"). Default: mafft. Optional parameter.  
-  - `-g` Genetic Code used. Default: 1. 1 represent "The Standard Code". For more information see documentation of [ParaAT](https://ngdc.cncb.ac.cn/tools/paraat/doc). Optional parameter.    
-  - `-t` Type of format of the file(s) containing information of the orthologous groups. You can chose one of the following: "OMA" or "other". If two information of the ortologous groups correspond to the "PairwiseOrthologs" file chose "OMA". Requerid parameter.     
-  - `-s` You can choose between the parameters: "single-copy" or "multiple-copy". Allows you to choose if you want to perform the analysis using only the information of orthologous genes with a 1:1 ratio ("single-copy"), or orthologous groups of multiple copies, such as 1:many, many:1, and many:many ("multiple-copy"). Useful parameter if your information comes from OMA. If your information does not have the OMA "PairwiseOrthologs" format, you can choose any. Required parameter.  
-  - `-h` Help  
+  - `-p` Directory containing the protein file(s) in Fasta format. If you ran OMA to get ortholog information, the "DB" file can be used, only with the Fasta. Required parameter.  
+  - `-n` Directory containing the nucleotide file(s) in Fasta format. Required parameter.    
+  - `-o` Directory containing information on orthologous groups. If you ran OMA, you can use the "PairwiseOrthologs" file. However, you can use tab-delimited text files in which each row represents an orthologous group with two columns. See example in the Input data section. Required parameter.  
+  - `-z` Process number used during alignment. It is used by the ParaAT program. Required parameter.  
+  - `-a` Aligner used. Depending on the alignment program you have installed, you can choose one of the following: "clustalw2", "t_coffee", "mafft" or "muscle"). Default: mafft. Optional parameter.  
+  - `-g` Genetic Code used. Default value: 1 (The Standard Code). For more information see the documentation of [ParaAT](https://ngdc.cncb.ac.cn/tools/paraat/doc). Optional parameter.    
+  - `-t` Format type of the file(s) containing orthologous group information. You can choose one of the following: "OMA" or "other". If the data of the orthologous groups correspond to the file "PairwiseOrthologs" choose "OMA". Required parameter.     
+  - `-s` You can choose between the parameters: "single-copy" or "multiple-copy". Allows you to choose wheter to perform the analysis using only the information from orthologous genes with a 1:1 ratio ("single-copy"), or orthologous groups of multiple copies, such as 1:many, many:1, and many:many ("multiple-copy"). Useful parameter if your information comes from OMA. If your information is not in the OMA "PairwiseOrthologs" format, you can choose either. Required parameter.   
+  - `-h` Help   
   
-**Import note:** Each gene must have the same code in its nucleotide and amino acid sequence. However, the code from one gene should not be repeated in another gene. Don't use "@" in sequence codes.
+**Import note:** Each gene must have the same code in its nucleotide and amino acid sequence. However, the code from one gene should not be repeated in another gene. Don't use "@" in sequence codes.  
 
 
 ## Input data  
 The pipeline requires four files. See Examples.  
     - Directory with file(s) containing multiple amino acid sequences.  
     - Directory with file(s) containing multiple nucleotide sequences.   
-    - Control files that specify the models and options for the analysis. No need to modify anything. Modifying some parameters in the control file can lead to error.  
+    - Control files that specify the models and options for the analysis. No need to modify anything. Modifying some parameters in the control file can an error.  
     - Directory with file(s) containing orthologous groups. 
-      - Example of "PairwiseOrthologs" OMA format, for the option "-t OMA":
+      - Example of OMA "PairwiseOrthologs" format, for the option "-t OMA":
 ```
 -bash-4.4$ genes_speciesA-genes_speciesB.txt 
 # Format: Protein 1<tab>Protein 2<tab>Protein ID1<tab>ProteinID2<tab>Orthology type<tab>OMA group (if any)
@@ -73,7 +74,7 @@ nad1_Echinococcus_multilocularis_AB018440	nad1_Eudiplozoon_nipponicum_MW704020
 ## Starting
 
   - **Directory**  
-  Your directory should contain the following files before running
+  Your directory must contain the following files before running.  
 
 ```
 -bash-4.4$ tree
@@ -115,15 +116,16 @@ or
 ```
   
   - **Output**  
-If you choe the option "-s single-copy" the key output files include:   
+If you choose the "-s single-copy" option, the key output files include:    
     - **single-copy** directory.  
-    - **Todos_resultados_single-copy**  file.
-If you choe the option "-s multiple-copy" the key output files include: 
-    - **multiple-copy** directory if you chose the option "-s multiple-copy".
-    - **Todos_resultados_multiple-copy**  file.
-The **single-copy** or **multiple-copy** directory has information for each pairwise comparison of species. Example. If the analysis performed the pairwise comparison of the genes of three species (genes_speciesA vs genes_speciesB; genes_speciesB vs genes_speciesC; genes_speciesA vs genes_speciesC), the directory will contain the following subdirectories "genes_speciesA-genes_speciesB", "genes_speciesB-genes_speciesC" and "genes_speciesA-genes_speciesC".
+    - **Todos_resultados_single-copy**  file.  
+If you choose the "-s multiple-copy" option, the key output files include:  
+    - **multiple-copy** directory.  
+    - **Todos_resultados_multiple-copy**  file.  
+The **single-copy** or **multiple-copy** directory has information for each pairwise species comparison. For example:  
+If the analysis performed pairwise comparison of genes from three species (genes_speciesA vs genes_speciesB; genes_speciesB vs genes_speciesC; genes_speciesA vs genes_speciesC), the directory would contain the following subdirectories "genes_speciesA-genes_speciesB", "genes_speciesB-genes_speciesC" and "genes_speciesA-genes_speciesC".
   
-Then of run Sinox.sh your directory should look similar to this:
+After running Sinox.sh, your directory should look like this:
 
 ```
 -bash-4.4$ tree
@@ -192,7 +194,7 @@ Then of run Sinox.sh your directory should look similar to this:
 ## Citation
 XXXX  
 
-Please, cite the dependencies used:  
+Please cite the dependencies used:  
 PAML:  [Yang, Z. (2007). PAML 4: Phylogenetic Analysis by Maximum Likelihood, Molecular Biology and Evolution, 24(8), 1586-1591.](https://academic.oup.com/mbe/article/24/8/1586/1103731)  
 ParaAT: [Zhang, Z., Xiao, J., Wu, J., Zhang, H., Liu, G., Wang, X., & Dai, L. (2012). ParaAT: a parallel tool for constructing multiple protein-coding DNA alignments. Biochemical and biophysical research communications, 419(4), 779-781.](https://www.sciencedirect.com/science/article/pii/S0006291X12003518)    
   
