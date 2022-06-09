@@ -226,7 +226,7 @@ To run execute
 This example have information about orthologous group obtained from a tab-delimited text file generated manually.   
 To run execute  
 ```
--bash-4.4$ ~/path/SANSRAPI.sh -p protein_directory/ -n nucleotide_directory/ -o Orthologs/ -z 4 -a mafft -g 1 -t OMA -s single-copy
+-bash-4.4$ ~/path/SANSRAPI.sh -p protein_directory/ -n nucleotide_directory/ -o Orthologs/ -z 4 -a mafft -g 1 -t other -s single-copy
 ```
 
 
