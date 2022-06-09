@@ -49,7 +49,7 @@ The pipeline requires four files. See Examples.
     - Directory with file(s) containing orthologous groups. 
       - Example of OMA "PairwiseOrthologs" format, for the option "-t OMA":
 ```
--bash-4.4$ genes_speciesA-genes_speciesB.txt 
+-bash-4.4$ head -n 10 genes_speciesA-genes_speciesB.txt 
 # Format: Protein 1<tab>Protein 2<tab>Protein ID1<tab>ProteinID2<tab>Orthology type<tab>OMA group (if any)
 # Every pair is listed only once, and in no particular order.
 # The map between sequence number and ID are given
