@@ -47,6 +47,7 @@ The pipeline requires four files. See Examples.
     - Directory with file(s) containing multiple nucleotide sequences.   
     - Control files that specify the models and options for the analysis. No need to modify anything. Modifying some parameters in the control file can an error.  
     - Directory with file(s) containing orthologous groups. 
+```
       - Example of OMA "PairwiseOrthologs" format, for the option "-t OMA":
 ```
 -bash-4.4$ head -n 10 genes_speciesA-genes_speciesB.txt 
