@@ -213,6 +213,7 @@ Clustal W: [Larkin, M. A., Blackshields, G., Brown, N. P., Chenna, R., McGettiga
 
 
 ## Test
+The example files are located in Example_pipeline.zip
 ### Example_1  
 This example have information about orthologous group obtained from OMA software.  
 
