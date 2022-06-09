@@ -1,4 +1,5 @@
-# SANSRAPI Synonym And NonSynonym Substitution Rate Pipeline
+# SANSRAPI 
+#Synonym And NonSynonym Substitution Rate Pipeline
 SANSRAPI v.1 is a pipeline built for Linux.
 
 
