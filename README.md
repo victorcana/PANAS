@@ -111,9 +111,9 @@ or
     └── genes_speciesB-genes_speciesC.txt
 ```
   
- - **Running Sinox**  
+ - **Running SANSRAPI**  
 ```
--bash-4.4$ ~/path/Sinox.sh -p protein_directory/ -n nucleotide_directory/ -o Orthologs/ -z 4 -a mafft -g 1 -t OMA -s single-copy
+-bash-4.4$ ~/path/SANSRAPI.sh -p protein_directory/ -n nucleotide_directory/ -o Orthologs/ -z 4 -a mafft -g 1 -t OMA -s single-copy
 ```
   
   - **Output**  
@@ -126,7 +126,7 @@ If you choose the "-s multiple-copy" option, the key output files include:
 The **single-copy** or **multiple-copy** directory has information for each pairwise species comparison. For example:  
 If the analysis performed pairwise comparison of genes from three species (genes_speciesA vs genes_speciesB; genes_speciesB vs genes_speciesC; genes_speciesA vs genes_speciesC), the directory would contain the following subdirectories "genes_speciesA-genes_speciesB", "genes_speciesB-genes_speciesC" and "genes_speciesA-genes_speciesC".
   
-After running Sinox.sh, your directory should look like this:
+After running SANSRAPI.sh, your directory should look like this:
 
 ```
 -bash-4.4$ tree
