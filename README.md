@@ -62,7 +62,7 @@ The pipeline requires four files. See Examples.
 5	5	cytb_Echinococcus_multilocularis_AB018440	cytb_Eudiplozoon_nipponicum_MW704020	1:1	2
 6	6	nad1_Echinococcus_multilocularis_AB018440	nad1_Eudiplozoon_nipponicum_MW704020	1:1	5
 ```
-- Example of other format, for the option "-t other":
+- Example of another format, for the option "-t other":
 ```
 -bash-4.4$ head -n 6 genes_speciesA-genes_speciesB.txt 
 atp6_Echinococcus_multilocularis_AB018440	atp6_Eudiplozoon_nipponicum_MW704020
