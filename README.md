@@ -1,5 +1,5 @@
-# SANSRAPI 
-# Synonymous And NonSynonymous Substitution Rate Pipeline
+# PANAS 
+## Pipeline for the Analysis of Nonsynonymous And Synonymous
 SANSRAPI v.1 is a pipeline built for Linux.
 
 
