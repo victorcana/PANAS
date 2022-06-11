@@ -1,6 +1,6 @@
 # PANAS 
 ## Pipeline for the Analysis of Nonsynonymous And Synonymous
-SANSRAPI v.1 is a pipeline built for Linux.
+PANAS v.1 is a pipeline built for Linux.
 
 
 
@@ -112,9 +112,9 @@ or
     └── genes_speciesB-genes_speciesC.txt
 ```
   
- - **Running SANSRAPI**  
+ - **Running PANAS**  
 ```
--bash-4.4$ ~/path/SANSRAPI.sh -p protein_directory/ -n nucleotide_directory/ -o Orthologs/ -z 4 -a mafft -g 1 -t OMA -s single-copy
+-bash-4.4$ ~/path/PANAS.sh -p protein_directory/ -n nucleotide_directory/ -o Orthologs/ -z 4 -a mafft -g 1 -t OMA -s single-copy
 ```
   
   - **Output**  
@@ -127,7 +127,7 @@ If you choose the "-s multiple-copy" option, the key output files include:
 The **single-copy** or **multiple-copy** directory has information for each pairwise species comparison. For example:  
 If the analysis performed pairwise comparison of genes from three species (genes_speciesA vs genes_speciesB; genes_speciesB vs genes_speciesC; genes_speciesA vs genes_speciesC), the directory would contain the following subdirectories "genes_speciesA-genes_speciesB", "genes_speciesB-genes_speciesC" and "genes_speciesA-genes_speciesC".
   
-After running SANSRAPI.sh, your directory should look like this:
+After running PANAS.sh, your directory should look like this:
 
 ```
 -bash-4.4$ tree
@@ -194,18 +194,18 @@ After running SANSRAPI.sh, your directory should look like this:
 ```
 
 ## Citation
-XXXX  
+PANAS: Caña-Bozada, V., Morales-Serna, F.N. 2022. PANAS: pipeline and a case study to obtain synonymous and nonsynonymous substitution rates in  genes of Platyhelminthes.
 
 Please cite the dependencies used:  
-PAML:  [Yang, Z. (2007). PAML 4: Phylogenetic Analysis by Maximum Likelihood, Molecular Biology and Evolution, 24(8), 1586-1591.](https://academic.oup.com/mbe/article/24/8/1586/1103731)  
-ParaAT: [Zhang, Z., Xiao, J., Wu, J., Zhang, H., Liu, G., Wang, X., & Dai, L. (2012). ParaAT: a parallel tool for constructing multiple protein-coding DNA alignments. Biochemical and biophysical research communications, 419(4), 779-781.](https://www.sciencedirect.com/science/article/pii/S0006291X12003518)    
+PAML:  [Yang, Z. (2007). PAML 4: Phylogenetic Analysis by Maximum Likelihood. Molecular Biology and Evolution, 24(8), 1586-1591.](https://academic.oup.com/mbe/article/24/8/1586/1103731)  
+ParaAT: [Zhang, Z., Xiao, J., Wu, J., Zhang, H., Liu, G., Wang, X., & Dai, L. (2012). ParaAT: a parallel tool for constructing multiple protein-coding DNA alignments. Biochemical and Biophysical Research Communications, 419, 779-781.](https://www.sciencedirect.com/science/article/pii/S0006291X12003518)    
   
   
 Please also cite the dependencies if used:  
-MAFFT: [Katoh, K., & Standley, D. M. (2013). MAFFT multiple sequence alignment software version 7: improvements in performance and usability. Molecular biology and evolution, 30(4), 772-780.](https://academic.oup.com/mbe/article/30/4/772/1073398)  
-MUSCLE: [Edgar, R. C. (2004). MUSCLE: multiple sequence alignment with high accuracy and high throughput. Nucleic acids research, 32(5), 1792-1797.](https://academic.oup.com/nar/article/32/5/1792/2380623)  
-T-Coffee:  [Notredame, C., Higgins, D. G., & Heringa, J. (2000). T-Coffee: A novel method for fast and accurate multiple sequence alignment. Journal of molecular biology, 302(1), 205-217.](https://www.sciencedirect.com/science/article/pii/S0022283600940427)  
-Clustal W: [Larkin, M. A., Blackshields, G., Brown, N. P., Chenna, R., McGettigan, P. A., McWilliam, H., Valentin, F., Wallace, I.M., Wilm, A., Lopez, R., Thompson, J.D., Gibson, T.J., & Higgins, D. G. (2007). Clustal W and Clustal X version 2.0. bioinformatics, 23(21), 2947-2948.](https://academic.oup.com/bioinformatics/article/23/21/2947/371686)
+MAFFT: [Katoh, K., & Standley, D. M. (2013). MAFFT multiple sequence alignment software version 7: improvements in performance and usability. Molecular Biology and Evolution, 30, 772-780.](https://academic.oup.com/mbe/article/30/4/772/1073398)  
+MUSCLE: [Edgar, R. C. (2004). MUSCLE: multiple sequence alignment with high accuracy and high throughput. Nucleic Acids Research, 32, 1792-1797.](https://academic.oup.com/nar/article/32/5/1792/2380623)  
+T-Coffee:  [Notredame, C., Higgins, D. G., & Heringa, J. (2000). T-Coffee: A novel method for fast and accurate multiple sequence alignment. Journal of Molecular Biology, 302, 205-217.](https://www.sciencedirect.com/science/article/pii/S0022283600940427)  
+Clustal W: [Larkin, M. A., Blackshields, G., Brown, N. P., Chenna, R., McGettigan, P. A., McWilliam, H., Valentin, F., Wallace, I.M., Wilm, A., Lopez, R., Thompson, J.D., Gibson, T.J., & Higgins, D. G. (2007). Clustal W and Clustal X version 2.0. Bioinformatics, 23, 2947-2948.](https://academic.oup.com/bioinformatics/article/23/21/2947/371686)
   
   
 ## Flowchart
@@ -219,7 +219,7 @@ This example have information about orthologous group obtained from OMA software
 
 To run execute  
 ```
--bash-4.4$ ~/path/SANSRAPI.sh -p protein_directory/ -n nucleotide_directory/ -o Orthologs/ -z 4 -a mafft -g 1 -t OMA -s single-copy
+-bash-4.4$ ~/path/PANAS.sh -p protein_directory/ -n nucleotide_directory/ -o Orthologs/ -z 4 -a mafft -g 1 -t OMA -s single-copy
 ```
 
 
@@ -227,7 +227,7 @@ To run execute
 This example have information about orthologous group obtained from a tab-delimited text file generated manually.   
 To run execute  
 ```
--bash-4.4$ ~/path/SANSRAPI.sh -p protein_directory/ -n nucleotide_directory/ -o Orthologs/ -z 4 -a mafft -g 1 -t other -s single-copy
+-bash-4.4$ ~/path/PANAS.sh -p protein_directory/ -n nucleotide_directory/ -o Orthologs/ -z 4 -a mafft -g 1 -t other -s single-copy
 ```
 
 
