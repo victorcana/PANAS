@@ -1,5 +1,5 @@
 # PANAS 
-## Pipeline for the Analysis of Nonsynonymous And Synonymous
+## Pipeline for the Analysis of Nonsynonymous And Synonymous substituions
 PANAS v.1 is a pipeline built for Linux.
 
 
@@ -120,10 +120,10 @@ or
   - **Output**  
 If you choose the "-s single-copy" option, the key output files include:    
     - **single-copy** directory.  
-    - **Todos_resultados_single-copy**  file.  
+    - **All_results_single-copy**  file.  
 If you choose the "-s multiple-copy" option, the key output files include:  
     - **multiple-copy** directory.  
-    - **Todos_resultados_multiple-copy**  file.  
+    - **All_results_multiple-copy**  file.  
 The **single-copy** or **multiple-copy** directory has information for each pairwise species comparison. For example:  
 If the analysis performed pairwise comparison of genes from three species (genes_speciesA vs genes_speciesB; genes_speciesB vs genes_speciesC; genes_speciesA vs genes_speciesC), the directory would contain the following subdirectories "genes_speciesA-genes_speciesB", "genes_speciesB-genes_speciesC" and "genes_speciesA-genes_speciesC".
   
@@ -158,8 +158,8 @@ After running PANAS.sh, your directory should look like this:
 │   │   │   ├── nad5_Echinococcus_multilocularis_AB018440-nad5_Eudiplozoon_nipponicum_MW704020.cds_aln.paml.mlc
 │   │   │   ├── nad6_Echinococcus_multilocularis_AB018440-nad6_Eudiplozoon_nipponicum_MW704020.cds_aln.paml
 │   │   │   └── nad6_Echinococcus_multilocularis_AB018440-nad6_Eudiplozoon_nipponicum_MW704020.cds_aln.paml.mlc
-│   │   ├── Resultados.genes_speciesA-genes_speciesB.txt.vic
-│   │   └── Resultados.genes_speciesA-genes_speciesB.txt.vic2
+│   │   ├── Results.genes_speciesA-genes_speciesB.txt.vic
+│   │   └── Results.genes_speciesA-genes_speciesB.txt.vic2
 │   ├── genes_speciesA-genes_speciesC.txt.carpeta
 │   │   ├── codeml.ctl
 │   │   ├── genes_speciesA-genes_speciesC.txt.homologos
@@ -173,8 +173,8 @@ After running PANAS.sh, your directory should look like this:
 │   │   │   ├── nad5_Echinococcus_multilocularis_AB018440-nad5_Fasciola_hepatica_AF216697.cds_aln.paml.mlc
 │   │   │   ├── nad6_Echinococcus_multilocularis_AB018440-nad6_Fasciola_hepatica_AF216697.cds_aln.paml
 │   │   │   └── nad6_Echinococcus_multilocularis_AB018440-nad6_Fasciola_hepatica_AF216697.cds_aln.paml.mlc
-│   │   ├── Resultados.genes_speciesA-genes_speciesC.txt.vic
-│   │   └── Resultados.genes_speciesA-genes_speciesC.txt.vic2
+│   │   ├── Results.genes_speciesA-genes_speciesC.txt.vic
+│   │   └── Results.genes_speciesA-genes_speciesC.txt.vic2
 │   └── genes_speciesB-genes_speciesC.txt.carpeta
 │       ├── codeml.ctl
 │       ├── genes_speciesB-genes_speciesC.txt.homologos
@@ -188,9 +188,9 @@ After running PANAS.sh, your directory should look like this:
 │       │   ├── nad5_Eudiplozoon_nipponicum_MW704020-nad5_Fasciola_hepatica_AF216697.cds_aln.paml.mlc
 │       │   ├── nad6_Eudiplozoon_nipponicum_MW704020-nad6_Fasciola_hepatica_AF216697.cds_aln.paml
 │       │   └── nad6_Eudiplozoon_nipponicum_MW704020-nad6_Fasciola_hepatica_AF216697.cds_aln.paml.mlc
-│       ├── Resultados.genes_speciesB-genes_speciesC.txt.vic
-│       └── Resultados.genes_speciesB-genes_speciesC.txt.vic2
-└── Todos_resultados_single-copy
+│       ├── Results.genes_speciesB-genes_speciesC.txt.vic
+│       └── Results.genes_speciesB-genes_speciesC.txt.vic2
+└── All_results_single-copy
 ```
 
 ## Citation
