@@ -26,7 +26,7 @@ Then run on the command line:
 ```
 -bash-4.4$ source ~/.bash_profile
 ```
-Paml may have compile time problems if you have gcc 11.2.0. To fix the problem, you can install the gcc 9.4.0 version which can be installed with the following command:  
+**Import note:** PAML may have compile time problems if you have gcc 11.2.0. To fix the problem, you can install the gcc 9.4.0 version which can be installed with the following command:  
 ```
 -sudo apt-get install -y gcc-9
 ```
