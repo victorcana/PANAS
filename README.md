@@ -30,7 +30,7 @@ Then run on the command line:
 ```
 -sudo apt-get install -y gcc-9
 ```
-Then, modify the src/Makefile by replacing "cc" with "gcc-9" on line 2. With this change PAML should be correctly installed.  
+Then, modify the src/Makefile text file by replacing "cc" with "gcc-9" on line 2. With this change PAML should be correctly installed.  
 
 
 ## Main Options  
