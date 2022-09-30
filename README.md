@@ -34,7 +34,6 @@ Then, modify the src/Makefile by replacing "cc" with "gcc-9" on line 2. With thi
 ```
 
 
-
 ## Main Options  
   - `-p` Directory containing the protein file(s) in Fasta format. If you ran OMA to get ortholog information, the "DB" file can be used, only with the Fasta. Required parameter.  
   - `-n` Directory containing the nucleotide file(s) in Fasta format. Required parameter.    
