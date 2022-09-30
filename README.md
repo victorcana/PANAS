@@ -31,7 +31,6 @@ Paml may have compile time problems if you have gcc 11.2.0. To fix the problem, 
 -sudo apt-get install -y gcc-9
 ```
 Then, modify the src/Makefile by replacing "cc" with "gcc-9" on line 2. With this change PAML should be correctly installed.  
-```
 
 
 ## Main Options  
