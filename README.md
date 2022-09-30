@@ -17,7 +17,7 @@ To make the program accessible from any working directory, add it to your PATH v
 ```
 -bash-4.4$ nano ~/.bash_profile
 ```
-Type and save the following lines:
+Type and save the following lines:  
 ```
 export PATH=$PATH:~/your/path/directory/paml4.9j/src/
 export PATH=$PATH:~/your/path/directory/ParaAT-master/
@@ -26,12 +26,14 @@ Then run on the command line:
 ```
 -bash-4.4$ source ~/.bash_profile
 ```
-Paml may have compile time problems if you have gcc 11.2.0. To fix the problem, you can install the gcc 9.4.0 version which can be installed with the following command:
+Paml may have compile time problems if you have gcc 11.2.0. To fix the problem, you can install the gcc 9.4.0 version which can be installed with the following command:  
 ```
 -sudo apt-get install -y gcc-9
 ```
-Then, modify the src/Makefile by replacing "cc" with "gcc-9" on line 2. With this change PAML should be correctly installed.
+Then, modify the src/Makefile by replacing "cc" with "gcc-9" on line 2. With this change PAML should be correctly installed.  
 ```
+
+
 
 ## Main Options  
   - `-p` Directory containing the protein file(s) in Fasta format. If you ran OMA to get ortholog information, the "DB" file can be used, only with the Fasta. Required parameter.  
