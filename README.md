@@ -200,7 +200,7 @@ After running PANAS.sh, your directory should look like this:
 ```
 
 ## Citation
-PANAS: [Caña-Bozada, V., Morales-Serna, F.N. 2022. PANAS: pipeline and a case study to obtain synonymous and nonsynonymous substitution rates in  genes of Platyhelminthes. Comparative Parasitology, 90(1), 5-10 (2023)](https://doi.org/10.1654/COPA-D-22-00011)
+PANAS: [Caña-Bozada, V., Morales-Serna, F.N. 2023. PANAS: pipeline and a case study to obtain synonymous and nonsynonymous substitution rates in  genes of Platyhelminthes. Comparative Parasitology, 90(1), 5-10.](https://doi.org/10.1654/COPA-D-22-00011)
 
 Please cite the dependencies used:  
 PAML:  [Yang, Z. (2007). PAML 4: Phylogenetic Analysis by Maximum Likelihood. Molecular Biology and Evolution, 24(8), 1586-1591.](https://academic.oup.com/mbe/article/24/8/1586/1103731)  
@@ -214,6 +214,10 @@ T-Coffee:  [Notredame, C., Higgins, D. G., & Heringa, J. (2000). T-Coffee: A nov
 Clustal W: [Larkin, M. A., Blackshields, G., Brown, N. P., Chenna, R., McGettigan, P. A., McWilliam, H., Valentin, F., Wallace, I.M., Wilm, A., Lopez, R., Thompson, J.D., Gibson, T.J., & Higgins, D. G. (2007). Clustal W and Clustal X version 2.0. Bioinformatics, 23, 2947-2948.](https://academic.oup.com/bioinformatics/article/23/21/2947/371686)
   
   
+Article using PANAS:  
+[Caña-Bozada, V., Robinson, M. W., Hernández-Mena, D. I., & Morales-Serna, F. N. (2023). Exploring Evolutionary Relationships within Neodermata Using Putative Orthologous Groups of Proteins, with Emphasis on Peptidases. Tropical Medicine and Infectious Disease, 8(1), 59.](https://doi.org/10.3390/tropicalmed8010059)
+
+
 ## Flowchart
 ![flowchart](Pipeline.png)
 
