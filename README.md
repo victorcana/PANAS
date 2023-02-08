@@ -214,7 +214,7 @@ T-Coffee:  [Notredame, C., Higgins, D. G., & Heringa, J. (2000). T-Coffee: A nov
 Clustal W: [Larkin, M. A., Blackshields, G., Brown, N. P., Chenna, R., McGettigan, P. A., McWilliam, H., Valentin, F., Wallace, I.M., Wilm, A., Lopez, R., Thompson, J.D., Gibson, T.J., & Higgins, D. G. (2007). Clustal W and Clustal X version 2.0. Bioinformatics, 23, 2947-2948.](https://academic.oup.com/bioinformatics/article/23/21/2947/371686)
   
   
-Article using PANAS:  
+## Article using PANAS  
 [Caña-Bozada, V., Robinson, M. W., Hernández-Mena, D. I., & Morales-Serna, F. N. (2023). Exploring Evolutionary Relationships within Neodermata Using Putative Orthologous Groups of Proteins, with Emphasis on Peptidases. Tropical Medicine and Infectious Disease, 8(1), 59.](https://doi.org/10.3390/tropicalmed8010059)
 
 
