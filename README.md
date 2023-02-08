@@ -200,7 +200,7 @@ After running PANAS.sh, your directory should look like this:
 ```
 
 ## Citation
-PANAS: [Caña-Bozada, V., Morales-Serna, F.N. 2022. PANAS: pipeline and a case study to obtain synonymous and nonsynonymous substitution rates in  genes of Platyhelminthes]. Comparative Parasitology, 90(1), 5-10 (2023). (https://doi.org/10.1654/COPA-D-22-00011)
+PANAS: [Caña-Bozada, V., Morales-Serna, F.N. 2022. PANAS: pipeline and a case study to obtain synonymous and nonsynonymous substitution rates in  genes of Platyhelminthes. Comparative Parasitology, 90(1), 5-10 (2023)](https://doi.org/10.1654/COPA-D-22-00011)
 
 Please cite the dependencies used:  
 PAML:  [Yang, Z. (2007). PAML 4: Phylogenetic Analysis by Maximum Likelihood. Molecular Biology and Evolution, 24(8), 1586-1591.](https://academic.oup.com/mbe/article/24/8/1586/1103731)  
